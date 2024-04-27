@@ -37,7 +37,7 @@ jobs:
       - name: "build and register"
         run: "gcloud builds  submit --tag us-central1-docker.pkg.dev/notely-421621/notely-ar-repo/notely:latest ."
 
-      - name: "db migration"
+      - name: "migrateup.sh"
         run: " ./scripts/migrateup.sh"
 
       - name: Deploy to Cloud Run
